@@ -1,7 +1,8 @@
 /* static/css/styles.css */
 
 body {
-    padding-bottom: 70px; /* Высота футера */
+    padding-top: 0px; /* Высота футера */
+    font-family: 'Arial', sans-serif;
 }
 
 .btn-scroll {
@@ -9,25 +10,66 @@ body {
     right: 20px;
     width: 50px;
     height: 50px;
-    border-radius: 30%;
+    bottom: 20px;
+    border-radius: 50%;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
     z-index: 1000;
+    opacity: 0.7;
     transition: opacity 0.3s;
 }
 
 .btn-scroll-top {
-    bottom: 50%; /* Расположение кнопки "Вверх" */
+    right: 20px;
+    /* bottom: 50%; Расположение кнопки "Вверх" */
     opacity: 0.7;
 }
 
 .btn-scroll-bottom {
-    bottom: 40%; /* Расположение кнопки "Вниз" */
+    left: 20px;
+    /* bottom: 40%; Расположение кнопки "Вниз" */
     opacity: 0.7;
 }
 
 .btn-scroll:hover {
     opacity: 1;
+}
+
+header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.25rem;
+}
+
+nav.navbar {
+    margin-bottom: 2rem;
+}
+
+main {
+    min-height: 60vh;
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+    border-top: 1px solid #e7e7e7;
+    width: 100%;
+}
+
+footer p {
+    margin-bottom: 0;
+    font-size: 1rem;
 }
