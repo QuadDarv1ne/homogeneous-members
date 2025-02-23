@@ -1,0 +1,76 @@
+# Байт-код Python
+__pycache__/ 
+*.py[cod]
+
+# Виртуальные окружения
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Локальные настройки Django
+local_settings.py
+
+# Файлы базы данных
+*.sqlite3
+
+# Логи и временные файлы
+*.log
+*.tmp
+
+# Файлы миграций Django
+# Исключаем все миграции, кроме тех, которые уже в репозитории
+migrations/
+!migrations/__init__.py
+!migrations/*.py
+
+# Статические файлы
+# Исключаем собранные статические файлы, но оставляем исходные
+staticfiles/
+static/
+media/
+
+# Файлы конфигурации и секреты
+.env
+*.ini
+*.cfg
+
+# Файлы IDE и редакторов
+.vscode/
+.idea/
+*.swp
+
+# Файлы сборки и установки
+build/
+dist/
+*.egg-info/
+.installed.cfg
+
+# Файлы документации
+docs/_build/
+
+# Файлы тестирования
+.coverage
+.tox/
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Файлы Docker
+.dockerignore
+Dockerfile
+docker-compose.yml
+
+# Файлы Node.js (если используется)
+node_modules/
+package-lock.json
+
+# Файлы macOS
+.DS_Store
+
+# Файлы Windows
+Thumbs.db
+ehthumbs.db

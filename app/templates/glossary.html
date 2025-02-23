@@ -1,8 +1,191 @@
 {% extends "base.html" %}
 
-{% block title %}Словарь{% endblock %}
+{% block title %}Словарь терминов{% endblock %}
 
 {% block content %}
-<h2 class="my-4">Словарь терминов</h2>
-<p>Объяснение лингвистических терминов...</p>
+<div class="container mt-5">
+    <h2 class="text-center mb-5">Словарь лингвистических терминов</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <!-- Термин 1 -->
+        <div class="col">
+            <div class="card h-100 border-light shadow-sm">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title"><i class="fas fa-volume-up"></i> Фонетика</h5>
+                    <p class="card-text flex-grow-1">Изучение звуков речи и их произношения.</p>
+                    <button type="button" class="btn btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#phoneticsModal">
+                        Узнать больше
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Термин 2 -->
+        <div class="col">
+            <div class="card h-100 border-light shadow-sm">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title"><i class="fas fa-cogs"></i> Морфология</h5>
+                    <p class="card-text flex-grow-1">Раздел лингвистики, изучающий структуру слов.</p>
+                    <button type="button" class="btn btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#morphologyModal">
+                        Узнать больше
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Термин 3 -->
+        <div class="col">
+            <div class="card h-100 border-light shadow-sm">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title"><i class="fas fa-list-ol"></i> Синтаксис</h5>
+                    <p class="card-text flex-grow-1">Правила построения предложений в языке.</p>
+                    <button type="button" class="btn btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#syntaxModal">
+                        Узнать больше
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Термин 4 -->
+        <div class="col">
+            <div class="card h-100 border-light shadow-sm">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title"><i class="fas fa-language"></i> Семантика</h5>
+                    <p class="card-text flex-grow-1">Изучение значений слов и выражений.</p>
+                    <button type="button" class="btn btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#semanticsModal">
+                        Узнать больше
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Термин 5 -->
+        <div class="col">
+            <div class="card h-100 border-light shadow-sm">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title"><i class="fas fa-comments"></i> Прагматика</h5>
+                    <p class="card-text flex-grow-1">Изучение использования языка в контексте.</p>
+                    <button type="button" class="btn btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#pragmaticsModal">
+                        Узнать больше
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Термин 6 -->
+        <div class="col">
+            <div class="card h-100 border-light shadow-sm">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title"><i class="fas fa-globe"></i> Диалектология</h5>
+                    <p class="card-text flex-grow-1">Изучение диалектов и их различий.</p>
+                    <button type="button" class="btn btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#dialectologyModal">
+                        Узнать больше
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно для Фонетики -->
+<div class="modal fade" id="phoneticsModal" tabindex="-1" aria-labelledby="phoneticsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="phoneticsModalLabel">Фонетика</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Фонетика — это раздел лингвистики, который изучает звуки речи. Она включает в себя артикуляцию, акустику и восприятие звуков.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно для Морфологии -->
+<div class="modal fade" id="morphologyModal" tabindex="-1" aria-labelledby="morphologyModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="morphologyModalLabel">Морфология</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Морфология — это раздел лингвистики, который изучает структуру слов и их формы. Она включает в себя изучение словообразования и словоизменения.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно для Синтаксиса -->
+<div class="modal fade" id="syntaxModal" tabindex="-1" aria-labelledby="syntaxModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="syntaxModalLabel">Синтаксис</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Синтаксис — это раздел лингвистики, который изучает правила построения предложений. Он описывает, как слова сочетаются друг с другом для создания грамматически корректных предложений.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно для Семантики -->
+<div class="modal fade" id="semanticsModal" tabindex="-1" aria-labelledby="semanticsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="semanticsModalLabel">Семантика</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Семантика — это раздел лингвистики, который изучает значения слов и выражений. Она исследует, как значения формируются и изменяются в языке.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно для Прагматики -->
+<div class="modal fade" id="pragmaticsModal" tabindex="-1" aria-labelledby="pragmaticsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="pragmaticsModalLabel">Прагматика</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Прагматика — это раздел лингвистики, который изучает использование языка в контексте. Она исследует, как контекст влияет на интерпретацию высказываний.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно для Диалектологии -->
+<div class="modal fade" id="dialectologyModal" tabindex="-1" aria-labelledby="dialectologyModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="dialectologyModalLabel">Диалектология</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Диалектология — это раздел лингвистики, который изучает диалекты и их различия. Она исследует, как диалекты формируются и развиваются.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
