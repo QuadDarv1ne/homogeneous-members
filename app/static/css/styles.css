@@ -1,75 +1,104 @@
-/* static/css/styles.css */
+/* styles.css */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --navbar-bg: #f8f9fa;
+    --navbar-text: #000000;
+    --footer-bg: #f8f9fa;
+    --footer-text: #000000;
+    --header-bg: linear-gradient(135deg, #6a11cb, #2575fc);
+    --scroll-btn-bg: #007bff;
+    --scroll-btn-hover: #0056b3;
+    --transition: all 0.3s ease;
+}
 
 body {
-    padding-top: 0px; /* Высота футера */
-    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: var(--transition);
 }
 
-.btn-scroll {
-    position: fixed;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    bottom: 20px;
-    border-radius: 50%;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    z-index: 1000;
-    opacity: 0.7;
-    transition: opacity 0.3s;
+.navbar {
+    background-color: var(--navbar-bg) !important;
+    transition: var(--transition);
 }
 
-.btn-scroll-top {
-    right: 20px;
-    /* bottom: 50%; Расположение кнопки "Вверх" */
-    opacity: 0.7;
-}
-
-.btn-scroll-bottom {
-    left: 20px;
-    /* bottom: 40%; Расположение кнопки "Вниз" */
-    opacity: 0.7;
-}
-
-.btn-scroll:hover {
-    opacity: 1;
-}
-
-header {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    color: white;
-    padding: 2rem 0;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
-
-header p {
-    font-size: 1.25rem;
-}
-
-nav.navbar {
-    margin-bottom: 2rem;
-}
-
-main {
-    min-height: 60vh;
+.navbar .nav-link {
+    color: var(--navbar-text) !important;
+    transition: var(--transition);
 }
 
 footer {
-    background-color: #f8f9fa;
-    padding: 1rem 0;
-    border-top: 1px solid #e7e7e7;
-    width: 100%;
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    transition: var(--transition);
 }
 
-footer p {
-    margin-bottom: 0;
-    font-size: 1rem;
+header {
+    background: var(--header-bg);
+}
+
+.btn-scroll {
+    background-color: var(--scroll-btn-bg);
+}
+
+.btn-scroll:hover {
+    background-color: var(--scroll-btn-hover);
+}
+
+.modal-content {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Темы */
+body.light-theme {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --navbar-bg: #f8f9fa;
+    --navbar-text: #000000;
+    --footer-bg: #f8f9fa;
+    --scroll-btn-bg: #007bff;
+    --scroll-btn-hover: #0056b3;
+}
+
+body.dark-theme {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --navbar-bg: #343a40;
+    --navbar-text: #ffffff;
+    --footer-bg: #343a40;
+    --header-bg: linear-gradient(135deg, #2c3e50, #3498db);
+    --scroll-btn-bg: #6c757d;
+    --scroll-btn-hover: #5a6268;
+}
+
+body.blue-theme {
+    --bg-color: #e0f7fa;
+    --text-color: #00796b;
+    --navbar-bg: #b2ebf2;
+    --navbar-text: #00796b;
+    --footer-bg: #b2ebf2;
+    --scroll-btn-bg: #00796b;
+    --scroll-btn-hover: #004d40;
+}
+
+body.orange-theme {
+    --bg-color: #fff3e0;
+    --text-color: #e65100;
+    --navbar-bg: #ffe0b2;
+    --navbar-text: #e65100;
+    --footer-bg: #ffe0b2;
+    --scroll-btn-bg: #e65100;
+    --scroll-btn-hover: #bf360c;
+}
+
+body.purple-theme {
+    --bg-color: #f3e5f5;
+    --text-color: #6a1b9a;
+    --navbar-bg: #e1bee7;
+    --navbar-text: #6a1b9a;
+    --footer-bg: #e1bee7;
+    --scroll-btn-bg: #6a1b9a;
+    --scroll-btn-hover: #4a148c;
 }
